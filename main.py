@@ -17,14 +17,6 @@ dp = Dispatcher(bot, loop=loop)
 async def send_hello(message: types.Message):
     await message.answer('hiiiiiii!')
 
-# Run the bot.
-async def main():
-    await dp.start_polling()
-
-# Close the event loop.
-async def stop():
-    await dp.stop_polling()
-    await bot.session.close()
 
 if __name__ == '__main__':
     loop.run_until_complete(main())
